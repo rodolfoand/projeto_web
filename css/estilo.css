@@ -12,6 +12,19 @@ a
 	color: black;
 }
 
+#galeria h4
+{
+	font-size: 20px;
+	font-family: calibri;
+}
+
+.informacoes h5
+{
+	font-size: 20px;
+	font-family: arial;
+	font-style: bold;
+}
+
 @media screen and (max-width: 400px) and (min-width: 0px)
 {
 	#imglogotopo
@@ -19,3 +32,4 @@ a
 		width: 30%;
 	}
 }
+
