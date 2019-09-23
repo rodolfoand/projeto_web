@@ -1,5 +1,5 @@
 body {
-	border: 4px;
+	
 	border-color: grey;
 }
 h4
@@ -28,6 +28,11 @@ a
 .informacoes p
 {
 	color: grey;
+}
+
+.cart
+{
+	border: 1px solid #333
 }
 
 @media screen and (max-width: 400px) and (min-width: 0px)
