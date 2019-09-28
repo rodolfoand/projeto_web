@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/produto.css"/>
+    <link rel="stylesheet" href="css/estilo.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -70,9 +70,9 @@
                     </li>
                 </ul>
                 <div class="search-container my-2 my-lg-0">
-                    <form action="/action_page.php">
-                        <input type="search" placeholder="Procurar..." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
+                     <form class="form-inline" action="produto-busca.html">
+                        <input class="form-control" type="search" placeholder="Procurar..." name="search" id="mySearch" required>
+                        <button type="submit" class="btn btn-dark" onclick="doSearch()"><i class="fa fa-search"></i></button>
                     </form>
                 </div>
             </div>
@@ -81,139 +81,153 @@
         <section id="product_search">
             <div class="container">
                 <div class="name_search">
-                    <p><h6>Pesquisa por: BANANA</h6></p>
+                    <p><h6>Pesquisa por: BOLACHA
+                    </h6></p>
                 </div>
-                <ul class="pagination justify-content-end">
-                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>          
+                
+                         
                 <div class="row search_row">
 
                     <div class="col-lg-3 col-sm-6">
                         <div class="product-item">
                             <div class="pi-pic">
-                                <img src="images/blusa-de-la-vermelha.png" alt="">
+                                <a href="produto-detalhe.html"><img src="images/sacada-roupas-femininas-inverno.png" alt=""></a>
                                 <div class="pi-links">
-                                    <button type="submit" class="btn btn-outline-dark btn-block btn-sm"> Comprar </button>
+                                    <a class="d-inline btn btn-light btn-outline-dark btn-sm" href="cesta.html" role="button">Comprar</a>
                                 </div>
                             </div>
                             <div class="pi-text">
-                                <h6>$35,00</h6>
-                                <p>Black and White Stripes Dress</p>
+                                <a href="produto-detalhe.html">
+                                    <h6>R$670</h6>
+                                    <p>Blusa de lã - Cinza e Preta Softwave</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <a href="produto-detalhe.html"><img src="images/sacada-roupas-femininas-inverno.png" alt=""></a>
+                                <div class="pi-links">
+                                    <a class="d-inline btn btn-light btn-outline-dark btn-sm" href="cesta.html" role="button">Comprar</a>
+                                </div>
+                            </div>
+                            <div class="pi-text">
+                                <a href="produto-detalhe.html">
+                                    <h6>R$670</h6>
+                                    <p>Blusa de lã - Cinza e Preta Softwave</p>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="product-item">
                             <div class="pi-pic">
-                                <img src="images/blusa-de-la-vermelha.png" alt="">
+                                <a href="produto-detalhe.html"><img src="images/sacada-roupas-femininas-inverno.png" alt=""></a>
                                 <div class="pi-links">
-                                    <button type="submit" class="btn btn-outline-dark btn-block btn-sm"> Comprar </button>
+                                    <a class="d-inline btn btn-light btn-outline-dark btn-sm" href="cesta.html" role="button">Comprar</a>
                                 </div>
                             </div>
                             <div class="pi-text">
-                                <h6>$35,00</h6>
-                                <p>Black and White Stripes Dress</p>
+                                <a href="produto-detalhe.html">
+                                    <h6>R$670</h6>
+                                    <p>Blusa de lã - Cinza e Preta Softwave</p>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="product-item">
                             <div class="pi-pic">
-                                <img src="images/blusa-de-la-vermelha.png" alt="">
+                                <a href="produto-detalhe.html"><img src="images/sacada-roupas-femininas-inverno.png" alt=""></a>
                                 <div class="pi-links">
-                                    <button type="submit" class="btn btn-outline-dark btn-block btn-sm"> Comprar </button>
+                                    <a class="d-inline btn btn-light btn-outline-dark btn-sm" href="cesta.html" role="button">Comprar</a>
                                 </div>
                             </div>
                             <div class="pi-text">
-                                <h6>$35,00</h6>
-                                <p>Black and White Stripes Dress</p>
+                                <a href="produto-detalhe.html">
+                                    <h6>R$670</h6>
+                                    <p>Blusa de lã - Cinza e Preta Softwave</p>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="product-item">
                             <div class="pi-pic">
-                                <img src="images/blusa-de-la-vermelha.png" alt="">
+                                <a href="produto-detalhe.html"><img src="images/sacada-roupas-femininas-inverno.png" alt=""></a>
                                 <div class="pi-links">
-                                    <button type="submit" class="btn btn-outline-dark btn-block btn-sm"> Comprar </button>
+                                    <a class="d-inline btn btn-light btn-outline-dark btn-sm" href="cesta.html" role="button">Comprar</a>
                                 </div>
                             </div>
                             <div class="pi-text">
-                                <h6>$35,00</h6>
-                                <p>Black and White Stripes Dress</p>
+                                <a href="produto-detalhe.html">
+                                    <h6>R$670</h6>
+                                    <p>Blusa de lã - Cinza e Preta Softwave</p>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="product-item">
                             <div class="pi-pic">
-                                <img src="images/blusa-de-la-vermelha.png" alt="">
+                                <a href="produto-detalhe.html"><img src="images/sacada-roupas-femininas-inverno.png" alt=""></a>
                                 <div class="pi-links">
-                                    <button type="submit" class="btn btn-outline-dark btn-block btn-sm"> Comprar </button>
+                                    <a class="d-inline btn btn-light btn-outline-dark btn-sm" href="cesta.html" role="button">Comprar</a>
                                 </div>
                             </div>
                             <div class="pi-text">
-                                <h6>$35,00</h6>
-                                <p>Black and White Stripes Dress</p>
+                                <a href="produto-detalhe.html">
+                                    <h6>R$670</h6>
+                                    <p>Blusa de lã - Cinza e Preta Softwave</p>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="product-item">
                             <div class="pi-pic">
-                                <img src="images/blusa-de-la-vermelha.png" alt="">
+                                <a href="produto-detalhe.html"><img src="images/sacada-roupas-femininas-inverno.png" alt=""></a>
                                 <div class="pi-links">
-                                    <button type="submit" class="btn btn-outline-dark btn-block btn-sm"> Comprar </button>
+                                    <a class="d-inline btn btn-light btn-outline-dark btn-sm" href="cesta.html" role="button">Comprar</a>
                                 </div>
                             </div>
                             <div class="pi-text">
-                                <h6>$35,00</h6>
-                                <p>Black and White Stripes Dress</p>
+                                <a href="produto-detalhe.html">
+                                    <h6>R$670</h6>
+                                    <p>Blusa de lã - Cinza e Preta Softwave</p>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="product-item">
                             <div class="pi-pic">
-                                <img src="images/blusa-de-la-vermelha.png" alt="">
+                                <a href="produto-detalhe.html"><img src="images/sacada-roupas-femininas-inverno.png" alt=""></a>
                                 <div class="pi-links">
-                                    <button type="submit" class="btn btn-outline-dark btn-block btn-sm"> Comprar </button>
+                                    <a class="d-inline btn btn-light btn-outline-dark btn-sm" href="cesta.html" role="button">Comprar</a>
                                 </div>
                             </div>
                             <div class="pi-text">
-                                <h6>$35,00</h6>
-                                <p>Black and White Stripes Dress</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="images/blusa-de-la-vermelha.png" alt="">
-                                <div class="pi-links">
-                                    <button type="submit" class="btn btn-outline-dark btn-block btn-sm"> Comprar </button>
-                                </div>
-                            </div>
-                            <div class="pi-text">
-                                <h6>$35,00</h6>
-                                <p>Black and White Stripes Dress</p>
+                                <a href="produto-detalhe.html">
+                                    <h6>R$670</h6>
+                                    <p>Blusa de lã - Cinza e Preta Softwave</p>
+                                </a>
                             </div>
                         </div>
                     </div>
 
 
                 </div>
-                <ul class="pagination justify-content-end">
-                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
+                <div id="search-pagination">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
+                    </ul> 
+                </div>
             </div>
             
         </section>
@@ -241,8 +255,8 @@
                             </div>
                             <div class="footer-text">
                                 <p> Inscreva-se para receber as ofertas especiais, toda semana uma promoção especial para você</p>
-                                <form action="#" method="post">
-                                    <input type="email" name="Email" placeholder="Cadastre seu email..." required="" >
+                                <form action="#" method="post" class="form-inline">
+                                    <input class="form-control" type="email" name="Email" placeholder="Cadastre seu email..." required="" >
                                     <button class="btn1 btn"><span class="fa fa-paper-plane-o" aria-hidden="true"></span></button>
                                 </form>
                             </div>
@@ -255,3 +269,16 @@
     </div>  
 </body>
 </html>
+
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("search-pagination");
+var btns = header.getElementsByClassName("page-item");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>

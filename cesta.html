@@ -68,11 +68,11 @@
                         </li>
                     </ul>
                     <div class="search-container my-2 my-lg-0">
-                        <form action="/action_page.php">
-                            <input type="search" placeholder="Procurar..." name="search">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
+                     <form class="form-inline" action="produto-busca.html">
+                        <input class="form-control" type="search" placeholder="Procurar..." name="search" id="mySearch" required>
+                        <button type="submit" class="btn btn-dark" onclick="doSearch()"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
                 </div>
             </nav>
             <div class="minhas-compras bg-light mt-4">
@@ -153,8 +153,8 @@
                                 </div>
                                 <div class="footer-text">
                                     <p> Inscreva-se para receber as ofertas especiais, toda semana uma promoção especial para você</p>
-                                    <form action="#" method="post">
-                                        <input type="email" name="Email" placeholder="Cadastre seu email..." required="" >
+                                    <form action="#" method="post" class="form-inline">
+                                        <input class="form-control" type="email" name="Email" placeholder="Cadastre seu email..." required="" >
                                         <button class="btn1 btn"><span class="fa fa-paper-plane-o" aria-hidden="true"></span></button>
                                     </form>
                                 </div>
