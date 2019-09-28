@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/produto.css" />
         <link rel="stylesheet" href="css/estilo.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -71,11 +70,11 @@
                         </li>
                     </ul>
                     <div class="search-container my-2 my-lg-0">
-                        <form action="/action_page.php">
-                            <input type="search" placeholder="Procurar..." name="search">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
+                     <form class="form-inline" action="produto-busca.html">
+                        <input class="form-control" type="search" placeholder="Procurar..." name="search" id="mySearch" required>
+                        <button type="submit" class="btn btn-dark" onclick="doSearch()"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
                 </div>
             </nav>
             <!-- produto -->
@@ -162,10 +161,9 @@
                         </div>
                         <div class="footer-text">
                             <p> Inscreva-se para receber as ofertas especiais, toda semana uma promoção especial para você</p>
-                            <form action="#" method="post">
-                                <input type="email" name="Email" placeholder="Enter your email..." required="">
+                            <form action="#" method="post" class="form-inline">
+                                <input class="form-control" type="email" name="Email" placeholder="Cadastre seu email..." required="" >
                                 <button class="btn1 btn"><span class="fa fa-paper-plane-o" aria-hidden="true"></span></button>
-                                <div class="clearfix"> </div>
                             </form>
                         </div>
                     </div>
