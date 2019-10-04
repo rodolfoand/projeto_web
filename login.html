@@ -251,6 +251,8 @@
             alert("Informe uma senha com no mínimo 6 dígitos !");
             senha.focus(); // foca no campo com id senha1
             return false;
+        }else {
+            alert("Login efetuado com sucesso !!!");
         }
     }
 
@@ -276,8 +278,8 @@
             return false;
         }
         //validação da senha
-        if (senha1.value.length < 6 || isNaN(senha1.value)) {
-            alert("Informe uma senha com no mínimo de 6 digitos !");
+        if (senha1.value.length < 6) {
+            alert("Informe uma senha com no mínimo 6 digitos !");
             senha1.focus(); // foca no campo com id senha1
             return false;
         }
@@ -287,17 +289,18 @@
             return false;
         }
         //validação CPF
-        if (cpf.value < 14) {
-            alert("Informe um CEP válido");
+        if (cpf.value.length < 11  || isNaN(cpf.value)) {
+            alert("Informe um CPF válido (11 algarismos, sem ponto e hifen)");
             cpf.focus();
             return false;
         }
         //validação telefone
-        if (telefone.value < 11 || isNaN(telefone.value)) {
+        if (telefone.value.length < 10 || isNaN(telefone.value)) {
             alert("Informe um telefone com DDD");
             telefone.focus();
             return false;
+        }else{
+            alert("Cadastro realizado com sucesso !!!");
         }
-
     }
 </script>
