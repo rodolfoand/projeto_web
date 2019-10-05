@@ -229,3 +229,51 @@ a
   background: black;
   color: #fff;
 }
+/*.footer-text{
+		font-size: 95%;
+	}
+}
+.footer-title-w3ls{
+	font-size: 24px;
+}*/
+
+@media screen and (max-width: 460px) and (min-width: 0px)
+{
+	#product_name{
+		font-size: 20px;
+	}
+	.footer-text{
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 375px) and (min-width: 0px)
+{
+	#product_name{
+		font-size: 19px;
+	}
+	.footer-text{
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 360px) and (min-width: 0px)
+{
+	#product_name{
+		font-size: 18px;
+	}
+	.footer-text{
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 320px) and (min-width: 0px)
+{
+	
+	#product_name{
+		font-size: 15px;
+	}
+	.footer-text{
+		font-size: 10px;
+	}
+}
+
+}

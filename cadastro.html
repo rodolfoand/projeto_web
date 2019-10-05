@@ -91,22 +91,56 @@
 
         <div class="container">
             <div class="row d-flex justify-content-center bg-light">
-                <aside class="col-sm-6 mt-4 mb-4">
+                <aside class="col-sm-8 mt-4 mb-4">
                     <div class="card">
                         <article class="card-body">
                               <form>
-                                <div class="form-group">
-                                    <label><h5>Trocar a senha</h5>Uma nova senha será enviada ao email cadastrado.</label>
-                                    <input name="" class="form-control" placeholder="Email" type="email" id="email">
-                                </div>
-                                
-                                <!-- form-group// -->
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-outline-dark btn-block" onclick="validar();">Enviar</button>
-                                    <a class="btn btn-dark btn-block" href="login.html">Voltar</a>
-                                </div>
-                                <!-- form-group// -->
-                            </form>
+                                        <div class="form-row">
+                                            <h5>Cadastro</h5>
+                                            <div class="col-md-12 mb-3">
+                                                <label for="nome">Nome Completo</label>
+                                                <input type="text" class="form-control" id="nome" placeholder="Nome" value="" >
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <label for="usuario">Email</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                                    </div>
+                                                    <input name="" class="form-control" placeholder="soft@wave.com" type="email" id="usuario">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="senha1">Senha</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroupPrepend2">#</span>
+                                                    </div>
+                                                    <input type="password" class="form-control" id="senha1" placeholder="******" aria-describedby="inputGroupPrepend2" >
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="senha2">Confirmação</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroupPrepend2">#</span>
+                                                    </div>
+                                                    <input type="password" class="form-control" id="senha2" placeholder="******" aria-describedby="inputGroupPrepend2" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="cpf">CPF</label>
+                                                <input type="text" class="form-control" id="cpf" placeholder="12345678901" value="" >
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="telefone">Telefone</label>
+                                                <input type="text" class="form-control" id="telefone" placeholder="11123456789" value="" >
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-outline-dark" type="submit" onclick="validar2();">Enviar</button>
+                                    </form>
                         </article>
                     </div>
                       <!--//produtos-->
@@ -150,20 +184,52 @@
 </html>
 
 <script language="javascript">
-    function validar() {
+    function validar2() {
+
+        //Validações do Modal
+        //validação do nome
+        if (nome.value.length < 3 || isNaN(nome.value) == false) { //tamanho minimo 3 ou isNaN = false pra evitar numeros
+            alert("Informe o nome completo !");
+            nome.focus(); // foca no campo com id nome
+            return false;
+        }
         //validação do email
         // a@a.co   tamanho minimo
         // 012345
-        if (email.value.length < 6 || // tamanho minimo do email 
-            email.value.indexOf("@") < 1 || // mostra a posição do @
-            email.value.lastIndexOf(".") <= email.value.indexOf("@") || // se a posição do ponto for <= a posição do @
-            email.value.lastIndexOf(".") == (email.value.length - 1)
+        if (usuario.value.length < 6 || // tamanho minimo do email   
+            usuario.value.indexOf("@") < 1 || // mostra a posição do @
+            usuario.value.lastIndexOf(".") <= usuario.value.indexOf("@") || // se a posição do ponto for <= a posição do @
+            usuario.value.lastIndexOf(".") == (usuario.value.length - 1)
         ) {
             alert("Informe um email válido");
-            email.focus(); // foca no campo com id email
+            usuario.focus(); // foca no campo com id email
+            return false;
+        }
+        //validação da senha
+        if (senha1.value.length < 6) {
+            alert("Informe uma senha com no mínimo 6 digitos !");
+            senha1.focus(); // foca no campo com id senha1
+            return false;
+        }
+        if (senha1.value != senha2.value) {
+            alert("Senha e confirmação estão diferentes");
+            senha2.focus(); // foca no campo com id senha2
+            return false;
+        }
+        //validação CPF
+        if (cpf.value.length < 11  || isNaN(cpf.value)) {
+            alert("Informe um CPF válido (11 algarismos, sem ponto e hifen)");
+            cpf.focus();
+            return false;
+        }
+        //validação telefone
+        if (telefone.value.length < 10 || isNaN(telefone.value)) {
+            alert("Informe um telefone com DDD");
+            telefone.focus();
             return false;
         }else{
-            alert("Uma nova senha foi enviada para seu email !!!");
+            alert("Cadastro realizado com sucesso !!!");
         }
     }
 </script>
+
